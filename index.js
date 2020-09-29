@@ -208,14 +208,6 @@ const getDHIS2Events = async (program, params = {}) => {
 
 // downloadExecel(drTB, "DRTB");
 
-// getDHIS2Events("lHi9lIKtptC", {
-//   skipPaging: "true",
-//   programStartDate: "2020-08-01",
-//   programEndDate: "2020-08-31",
-// }).then(() => {
-//   console.log("Finished");
-// });
-
 // downloadCategories().then(() => {
 //   console.log("Finished");
 // });
@@ -237,4 +229,12 @@ const downloadExecel1 = (data) => {
   XLSX.writeFile(wb, `data.xlsx`);
 };
 
-downloadExecel1(kununka);
+// downloadExecel1(kununka);
+
+getDHIS2Events("lHi9lIKtptC", {
+  skipPaging: "true",
+  programStartDate: "2020-09-01",
+  programEndDate: "2020-09-30",
+}).then(() => {
+  console.log("Finished");
+});
